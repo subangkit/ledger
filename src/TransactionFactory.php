@@ -14,6 +14,15 @@ use Illuminate\Support\Facades\DB;
 
 class TransactionFactory
 {
+    /**
+     * @param string $description
+     * @return LedgerTransaction
+     */
+    public static function getTransaction($description = '') {
+        $transaction = LedgerTransaction::where('description', $description)->first();
+        return $transaction;
+    }
+
     public static function createTransaction(
         array $mutations,
         string $description

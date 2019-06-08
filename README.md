@@ -104,3 +104,10 @@ sum of the debit transactions subtracted.
 ```php
 User::find(1)->account('groceries')->balance();
 ```
+
+### Fetching transaction
+
+Get Transaction Detail using description
+```php
+TransactionFactory::getTransaction('TransactionDescription')
+```
